@@ -30,7 +30,7 @@ fi
 
 echo "Please enter a Password."
 while [[ -z $PASSWD ]]; do
-	if [[ $I -gt 1 ]]; then
+	if [[ $I -ge 1 ]]; then
 		echo "Enter a non-empty Password."
 	fi
 	read PASSWD
