@@ -13,14 +13,14 @@ else
 fi
 
 
-groupadd $GROUP 2> ./setup.log
+groupadd $GROUP 2> /dev/null
 if [[ $? -ne 0 ]]; then
 	echo "Group already exists. Try another Groupname."
 	exit 1
 fi
 
 
-useradd -s /bin/bash -g $GROUP $NAME 2> ./setup.log
+useradd -s /bin/bash -g $GROUP $NAME 2> /dev/null
 if [[ $? -ne 0 ]]; then
 	echo "User already exists. Try another Username."
 	groupdel $GROUP
@@ -40,7 +40,7 @@ echo "$NAME:$PASSWD" | chpasswd
 
 echo "(User : Group) is ($(groups $NAME))"
 
-mkdir /$NAME 2> ./setup.log
+mkdir /$NAME 2> /dev/null
 if [[ $? -ne 0 ]]; then
 	echo "Directory for $NAME already exists. Ownership was not changed to avoid issues."
 else
