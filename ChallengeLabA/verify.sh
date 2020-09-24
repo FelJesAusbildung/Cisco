@@ -14,3 +14,4 @@ stat /Engineering/ /Sales/ /IS/|egrep "File:|Access: \("|cat > verify.log
 
 echo "Confidential Documents" > verify.log
 stat /Engineering/document.txt /Sales/document.txt /IS/document.txt|egrep "File:|Access: \("|cat > verify.log
+echo "verify.log has been created and all info has been documented there."
