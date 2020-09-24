@@ -1,8 +1,6 @@
 #!/bin/bash
 
-mkdir /Engineering
-mkdir /Sales
-mkdir /IS
+mkdir /Engineering /Sales /IS
 
 groupadd engineering
 groupadd sales
