@@ -12,7 +12,6 @@ else
 	exit 1
 fi
 
-
 groupadd $GROUP 2> /dev/null
 if [[ $? -ne 0 ]]; then
 	echo "Group already exists. Try another Groupname."
