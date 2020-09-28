@@ -33,7 +33,7 @@ while [[ -z $PASSWD ]]; do
 	if [[ $I -ge 1 ]]; then
 		echo "Enter a non-empty Password."
 	fi
-	read PASSWD
+	read -s PASSWD
 	I=$I+1
 done
 echo "$NAME:$PASSWD" | chpasswd
