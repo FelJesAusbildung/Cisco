@@ -6,16 +6,16 @@ groupadd engineering
 groupadd sales
 groupadd is
 
-useradd -s /bin/bash -g engineering engineering-admin
-useradd -s /bin/bash -g sales sales-admin
-useradd -s /bin/bash -g is is-admin
+useradd -s /bin/bash -d /Engineering -g engineering engineering-admin
+useradd -s /bin/bash -d /Sales -g sales sales-admin
+useradd -s /bin/bash -d /IS -g is is-admin
 
-useradd -s /bin/bash -g engineering engineering-user1
-useradd -s /bin/bash -g engineering engineering-user2
-useradd -s /bin/bash -g sales sales-user1
-useradd -s /bin/bash -g sales sales-user2
-useradd -s /bin/bash -g is is-user1
-useradd -s /bin/bash -g is is-user2
+useradd -s /bin/bash -d /Engineering -g engineering engineering-user1
+useradd -s /bin/bash -d /Engineering -g engineering engineering-user2
+useradd -s /bin/bash -d /Sales -g sales sales-user1
+useradd -s /bin/bash -d /Sales -g sales sales-user2
+useradd -s /bin/bash -d /IS -g is is-user1
+useradd -s /bin/bash -d /IS -g is is-user2
 
 chown engineering-admin:engineering /Engineering
 chmod -R 1770 /Engineering
